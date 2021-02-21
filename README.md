@@ -89,7 +89,7 @@ For a graphic representation of the software achitecture, please check final_ass
 	- Sometimes the input is not detected, so when you press a number and it he acquires a null character. <br>
 	- Sometimes it seems that Docker change scheduling order of my scripts unreasonably (so in very rarely cases input for commands overlaps input for target).<br>
 	
-I think that these are problems related to Docker execution on my PC, but I cannot be sure of this.
+NB: I think that these are problems related to Docker execution on my PC, but I cannot be sure of this.
 
 **Possible improvements**:
 
