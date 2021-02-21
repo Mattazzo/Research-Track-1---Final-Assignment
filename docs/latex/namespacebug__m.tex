@@ -1,0 +1,280 @@
+\hypertarget{namespacebug__m}{}\section{bug\+\_\+m Namespace Reference}
+\label{namespacebug__m}\index{bug\+\_\+m@{bug\+\_\+m}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacebug__m_add2465382834c48e8e5ec6e361fb6eec}{bug0\+Callback} (req)
+\begin{DoxyCompactList}\small\item\em Callback service function to activate or deactivate the service. \end{DoxyCompactList}\item 
+def \hyperlink{namespacebug__m_a27cfd2a326148157d3e5e0affbe763f3}{clbk\+\_\+odom} (msg)
+\begin{DoxyCompactList}\small\item\em Callback function to know robot position. \end{DoxyCompactList}\item 
+def \hyperlink{namespacebug__m_a6ab3d92b5b6ea12eaa52bf21cfa111f1}{clbk\+\_\+laser} (msg)
+\begin{DoxyCompactList}\small\item\em Calback function to know laser detection values. \end{DoxyCompactList}\item 
+def \hyperlink{namespacebug__m_aca19305feae5c5489e7452e921fcbd9c}{change\+\_\+state} (state)
+\begin{DoxyCompactList}\small\item\em Function to change state in during the algorithm(wall follow, go to point or target reached) \end{DoxyCompactList}\item 
+def \hyperlink{namespacebug__m_a6547c5ebcd1d3aa3e104a5b573e47862}{normalize\+\_\+angle} (angle)
+\begin{DoxyCompactList}\small\item\em Function to normalize angle. \end{DoxyCompactList}\item 
+def \hyperlink{namespacebug__m_a357589ad533151302b9fa9a893833382}{main} ()
+\begin{DoxyCompactList}\small\item\em Main function which implement the Bug0 algorithm slightly modified. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacebug__m_adc14150838edf40c8028207cd6bb2082}{pub} = None
+\begin{DoxyCompactList}\small\item\em Publisher for robot velocity. \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_abd32bbd25b55f71e56505e72ba56c2f6}{srv\+\_\+client\+\_\+go\+\_\+to\+\_\+point\+\_\+} = None
+\begin{DoxyCompactList}\small\item\em Client of go to point service. \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_af40e8063430e5b54ef2f3f8368338744}{srv\+\_\+client\+\_\+wall\+\_\+follower\+\_\+} = None
+\begin{DoxyCompactList}\small\item\em Client of wall follower service. \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_aaeea805feba4dc593b505d3935707987}{rdm\+\_\+target\+\_\+client} = None
+\begin{DoxyCompactList}\small\item\em Client of random target service. \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_ac15f809b3beeffde1c35d3483fe0f07d}{user\+\_\+target\+\_\+client} = None
+\begin{DoxyCompactList}\small\item\em Client of user target service. \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_a714bf24ade1dcbaabdd0e6e1779871bd}{user\+\_\+cmd\+\_\+client} = None
+\begin{DoxyCompactList}\small\item\em Client of user command service. \end{DoxyCompactList}\item 
+int \hyperlink{namespacebug__m_a8b5b5c9259592b8efd526c5adb95d95b}{yaw\+\_\+} = 0
+\begin{DoxyCompactList}\small\item\em Orientation angle. \end{DoxyCompactList}\item 
+int \hyperlink{namespacebug__m_a23e5e76f14d9d0d139767cb229a53dda}{yaw\+\_\+error\+\_\+allowed\+\_\+} = 5
+\begin{DoxyCompactList}\small\item\em Orientation error allowed. \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_ab108d02234aa3ec58605b9f6980ec090}{position\+\_\+} = Point()
+\begin{DoxyCompactList}\small\item\em Robot position. \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_a8fb60e35f164091fe3355d3a0bce95af}{desired\+\_\+position\+\_\+} = Point()
+\begin{DoxyCompactList}\small\item\em Target position. \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_af10f89c7f929c9babce108f5d7382996}{x}
+\begin{DoxyCompactList}\small\item\em Iniitialization of target x coordinate. \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_ab8596d2ae799585b0d89152b55891aa8}{y}
+\begin{DoxyCompactList}\small\item\em Iniitialization of target y coordinate. \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_afbb54887da57b97920c8d36c6daed1fc}{z}
+\begin{DoxyCompactList}\small\item\em Iniitialization of target z coordinate. \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_ac9d4d95c034fca5a2b5d08ea845bbfcb}{regions\+\_\+} = None
+\begin{DoxyCompactList}\small\item\em Regions of Laser callback. \end{DoxyCompactList}\item 
+list \hyperlink{namespacebug__m_ae70f71d3816862f72790fae7bfaa543b}{state\+\_\+desc\+\_\+} = \mbox{[}\textquotesingle{}Go to point\textquotesingle{}, \textquotesingle{}wall following\textquotesingle{}, \textquotesingle{}target reached\textquotesingle{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Possible states. \end{DoxyCompactList}\item 
+int \hyperlink{namespacebug__m_a79dc362dff5bef439beacdd5c0c3b2f1}{state\+\_\+} = 2
+\begin{DoxyCompactList}\small\item\em Initial state. \end{DoxyCompactList}\item 
+bool \hyperlink{namespacebug__m_aac2be257b1acdebfb27dab0e311550d4}{active\+\_\+} = False
+\begin{DoxyCompactList}\small\item\em Service active or not ( fasle by default) \end{DoxyCompactList}\item 
+int \hyperlink{namespacebug__m_a344bbe115cc5a0f27c601941b64f60b0}{start} = 0
+\begin{DoxyCompactList}\small\item\em variable to know if it is just started \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_ad89000edbe3340ac3fe8bd5bee368dec}{start\+\_\+time} = rospy.\+Time()
+\begin{DoxyCompactList}\small\item\em Start time to reaching the target. \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_ad56f445349e05abe7f111b48e25d3ecb}{timeout} = rospy.\+Time()
+\begin{DoxyCompactList}\small\item\em Timeout for timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{bug\+\_\+m@{bug\+\_\+m}!bug0\+Callback@{bug0\+Callback}}
+\index{bug0\+Callback@{bug0\+Callback}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{bug0\+Callback(req)}{bug0Callback(req)}}]{\setlength{\rightskip}{0pt plus 5cm}def bug\+\_\+m.\+bug0\+Callback (
+\begin{DoxyParamCaption}
+\item[{}]{req}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacebug__m_add2465382834c48e8e5ec6e361fb6eec}{}\label{namespacebug__m_add2465382834c48e8e5ec6e361fb6eec}
+
+
+Callback service function to activate or deactivate the service. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & True to activate the service, False to deactivate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+res True to confirm that the operation is done 
+\end{DoxyReturn}
+\index{bug\+\_\+m@{bug\+\_\+m}!change\+\_\+state@{change\+\_\+state}}
+\index{change\+\_\+state@{change\+\_\+state}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{change\+\_\+state(state)}{change_state(state)}}]{\setlength{\rightskip}{0pt plus 5cm}def bug\+\_\+m.\+change\+\_\+state (
+\begin{DoxyParamCaption}
+\item[{}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacebug__m_aca19305feae5c5489e7452e921fcbd9c}{}\label{namespacebug__m_aca19305feae5c5489e7452e921fcbd9c}
+
+
+Function to change state in during the algorithm(wall follow, go to point or target reached) 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!clbk\+\_\+laser@{clbk\+\_\+laser}}
+\index{clbk\+\_\+laser@{clbk\+\_\+laser}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{clbk\+\_\+laser(msg)}{clbk_laser(msg)}}]{\setlength{\rightskip}{0pt plus 5cm}def bug\+\_\+m.\+clbk\+\_\+laser (
+\begin{DoxyParamCaption}
+\item[{}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacebug__m_a6ab3d92b5b6ea12eaa52bf21cfa111f1}{}\label{namespacebug__m_a6ab3d92b5b6ea12eaa52bf21cfa111f1}
+
+
+Calback function to know laser detection values. 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!clbk\+\_\+odom@{clbk\+\_\+odom}}
+\index{clbk\+\_\+odom@{clbk\+\_\+odom}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{clbk\+\_\+odom(msg)}{clbk_odom(msg)}}]{\setlength{\rightskip}{0pt plus 5cm}def bug\+\_\+m.\+clbk\+\_\+odom (
+\begin{DoxyParamCaption}
+\item[{}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacebug__m_a27cfd2a326148157d3e5e0affbe763f3}{}\label{namespacebug__m_a27cfd2a326148157d3e5e0affbe763f3}
+
+
+Callback function to know robot position. 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!main@{main}}
+\index{main@{main}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}def bug\+\_\+m.\+main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacebug__m_a357589ad533151302b9fa9a893833382}{}\label{namespacebug__m_a357589ad533151302b9fa9a893833382}
+
+
+Main function which implement the Bug0 algorithm slightly modified. 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!normalize\+\_\+angle@{normalize\+\_\+angle}}
+\index{normalize\+\_\+angle@{normalize\+\_\+angle}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{normalize\+\_\+angle(angle)}{normalize_angle(angle)}}]{\setlength{\rightskip}{0pt plus 5cm}def bug\+\_\+m.\+normalize\+\_\+angle (
+\begin{DoxyParamCaption}
+\item[{}]{angle}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacebug__m_a6547c5ebcd1d3aa3e104a5b573e47862}{}\label{namespacebug__m_a6547c5ebcd1d3aa3e104a5b573e47862}
+
+
+Function to normalize angle. 
+
+
+
+\subsection{Variable Documentation}
+\index{bug\+\_\+m@{bug\+\_\+m}!active\+\_\+@{active\+\_\+}}
+\index{active\+\_\+@{active\+\_\+}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{active\+\_\+}{active_}}]{\setlength{\rightskip}{0pt plus 5cm}bool bug\+\_\+m.\+active\+\_\+ = False}\hypertarget{namespacebug__m_aac2be257b1acdebfb27dab0e311550d4}{}\label{namespacebug__m_aac2be257b1acdebfb27dab0e311550d4}
+
+
+Service active or not ( fasle by default) 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!desired\+\_\+position\+\_\+@{desired\+\_\+position\+\_\+}}
+\index{desired\+\_\+position\+\_\+@{desired\+\_\+position\+\_\+}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{desired\+\_\+position\+\_\+}{desired_position_}}]{\setlength{\rightskip}{0pt plus 5cm}bug\+\_\+m.\+desired\+\_\+position\+\_\+ = Point()}\hypertarget{namespacebug__m_a8fb60e35f164091fe3355d3a0bce95af}{}\label{namespacebug__m_a8fb60e35f164091fe3355d3a0bce95af}
+
+
+Target position. 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!position\+\_\+@{position\+\_\+}}
+\index{position\+\_\+@{position\+\_\+}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{position\+\_\+}{position_}}]{\setlength{\rightskip}{0pt plus 5cm}bug\+\_\+m.\+position\+\_\+ = Point()}\hypertarget{namespacebug__m_ab108d02234aa3ec58605b9f6980ec090}{}\label{namespacebug__m_ab108d02234aa3ec58605b9f6980ec090}
+
+
+Robot position. 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!pub@{pub}}
+\index{pub@{pub}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{pub}{pub}}]{\setlength{\rightskip}{0pt plus 5cm}bug\+\_\+m.\+pub = None}\hypertarget{namespacebug__m_adc14150838edf40c8028207cd6bb2082}{}\label{namespacebug__m_adc14150838edf40c8028207cd6bb2082}
+
+
+Publisher for robot velocity. 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!rdm\+\_\+target\+\_\+client@{rdm\+\_\+target\+\_\+client}}
+\index{rdm\+\_\+target\+\_\+client@{rdm\+\_\+target\+\_\+client}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{rdm\+\_\+target\+\_\+client}{rdm_target_client}}]{\setlength{\rightskip}{0pt plus 5cm}bug\+\_\+m.\+rdm\+\_\+target\+\_\+client = None}\hypertarget{namespacebug__m_aaeea805feba4dc593b505d3935707987}{}\label{namespacebug__m_aaeea805feba4dc593b505d3935707987}
+
+
+Client of random target service. 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!regions\+\_\+@{regions\+\_\+}}
+\index{regions\+\_\+@{regions\+\_\+}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{regions\+\_\+}{regions_}}]{\setlength{\rightskip}{0pt plus 5cm}bug\+\_\+m.\+regions\+\_\+ = None}\hypertarget{namespacebug__m_ac9d4d95c034fca5a2b5d08ea845bbfcb}{}\label{namespacebug__m_ac9d4d95c034fca5a2b5d08ea845bbfcb}
+
+
+Regions of Laser callback. 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!srv\+\_\+client\+\_\+go\+\_\+to\+\_\+point\+\_\+@{srv\+\_\+client\+\_\+go\+\_\+to\+\_\+point\+\_\+}}
+\index{srv\+\_\+client\+\_\+go\+\_\+to\+\_\+point\+\_\+@{srv\+\_\+client\+\_\+go\+\_\+to\+\_\+point\+\_\+}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{srv\+\_\+client\+\_\+go\+\_\+to\+\_\+point\+\_\+}{srv_client_go_to_point_}}]{\setlength{\rightskip}{0pt plus 5cm}bug\+\_\+m.\+srv\+\_\+client\+\_\+go\+\_\+to\+\_\+point\+\_\+ = None}\hypertarget{namespacebug__m_abd32bbd25b55f71e56505e72ba56c2f6}{}\label{namespacebug__m_abd32bbd25b55f71e56505e72ba56c2f6}
+
+
+Client of go to point service. 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!srv\+\_\+client\+\_\+wall\+\_\+follower\+\_\+@{srv\+\_\+client\+\_\+wall\+\_\+follower\+\_\+}}
+\index{srv\+\_\+client\+\_\+wall\+\_\+follower\+\_\+@{srv\+\_\+client\+\_\+wall\+\_\+follower\+\_\+}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{srv\+\_\+client\+\_\+wall\+\_\+follower\+\_\+}{srv_client_wall_follower_}}]{\setlength{\rightskip}{0pt plus 5cm}bug\+\_\+m.\+srv\+\_\+client\+\_\+wall\+\_\+follower\+\_\+ = None}\hypertarget{namespacebug__m_af40e8063430e5b54ef2f3f8368338744}{}\label{namespacebug__m_af40e8063430e5b54ef2f3f8368338744}
+
+
+Client of wall follower service. 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!start@{start}}
+\index{start@{start}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{start}{start}}]{\setlength{\rightskip}{0pt plus 5cm}int bug\+\_\+m.\+start = 0}\hypertarget{namespacebug__m_a344bbe115cc5a0f27c601941b64f60b0}{}\label{namespacebug__m_a344bbe115cc5a0f27c601941b64f60b0}
+
+
+variable to know if it is just started 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!start\+\_\+time@{start\+\_\+time}}
+\index{start\+\_\+time@{start\+\_\+time}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{start\+\_\+time}{start_time}}]{\setlength{\rightskip}{0pt plus 5cm}bug\+\_\+m.\+start\+\_\+time = rospy.\+Time()}\hypertarget{namespacebug__m_ad89000edbe3340ac3fe8bd5bee368dec}{}\label{namespacebug__m_ad89000edbe3340ac3fe8bd5bee368dec}
+
+
+Start time to reaching the target. 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!state\+\_\+@{state\+\_\+}}
+\index{state\+\_\+@{state\+\_\+}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{state\+\_\+}{state_}}]{\setlength{\rightskip}{0pt plus 5cm}int bug\+\_\+m.\+state\+\_\+ = 2}\hypertarget{namespacebug__m_a79dc362dff5bef439beacdd5c0c3b2f1}{}\label{namespacebug__m_a79dc362dff5bef439beacdd5c0c3b2f1}
+
+
+Initial state. 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!state\+\_\+desc\+\_\+@{state\+\_\+desc\+\_\+}}
+\index{state\+\_\+desc\+\_\+@{state\+\_\+desc\+\_\+}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{state\+\_\+desc\+\_\+}{state_desc_}}]{\setlength{\rightskip}{0pt plus 5cm}list bug\+\_\+m.\+state\+\_\+desc\+\_\+ = \mbox{[}\textquotesingle{}Go to point\textquotesingle{}, \textquotesingle{}wall following\textquotesingle{}, \textquotesingle{}target reached\textquotesingle{}\mbox{]}}\hypertarget{namespacebug__m_ae70f71d3816862f72790fae7bfaa543b}{}\label{namespacebug__m_ae70f71d3816862f72790fae7bfaa543b}
+
+
+Possible states. 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!timeout@{timeout}}
+\index{timeout@{timeout}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{timeout}{timeout}}]{\setlength{\rightskip}{0pt plus 5cm}bug\+\_\+m.\+timeout = rospy.\+Time()}\hypertarget{namespacebug__m_ad56f445349e05abe7f111b48e25d3ecb}{}\label{namespacebug__m_ad56f445349e05abe7f111b48e25d3ecb}
+
+
+Timeout for timer. 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!user\+\_\+cmd\+\_\+client@{user\+\_\+cmd\+\_\+client}}
+\index{user\+\_\+cmd\+\_\+client@{user\+\_\+cmd\+\_\+client}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{user\+\_\+cmd\+\_\+client}{user_cmd_client}}]{\setlength{\rightskip}{0pt plus 5cm}bug\+\_\+m.\+user\+\_\+cmd\+\_\+client = None}\hypertarget{namespacebug__m_a714bf24ade1dcbaabdd0e6e1779871bd}{}\label{namespacebug__m_a714bf24ade1dcbaabdd0e6e1779871bd}
+
+
+Client of user command service. 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!user\+\_\+target\+\_\+client@{user\+\_\+target\+\_\+client}}
+\index{user\+\_\+target\+\_\+client@{user\+\_\+target\+\_\+client}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{user\+\_\+target\+\_\+client}{user_target_client}}]{\setlength{\rightskip}{0pt plus 5cm}bug\+\_\+m.\+user\+\_\+target\+\_\+client = None}\hypertarget{namespacebug__m_ac15f809b3beeffde1c35d3483fe0f07d}{}\label{namespacebug__m_ac15f809b3beeffde1c35d3483fe0f07d}
+
+
+Client of user target service. 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!x@{x}}
+\index{x@{x}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{x}{x}}]{\setlength{\rightskip}{0pt plus 5cm}bug\+\_\+m.\+x}\hypertarget{namespacebug__m_af10f89c7f929c9babce108f5d7382996}{}\label{namespacebug__m_af10f89c7f929c9babce108f5d7382996}
+
+
+Iniitialization of target x coordinate. 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!y@{y}}
+\index{y@{y}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{y}{y}}]{\setlength{\rightskip}{0pt plus 5cm}bug\+\_\+m.\+y}\hypertarget{namespacebug__m_ab8596d2ae799585b0d89152b55891aa8}{}\label{namespacebug__m_ab8596d2ae799585b0d89152b55891aa8}
+
+
+Iniitialization of target y coordinate. 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!yaw\+\_\+@{yaw\+\_\+}}
+\index{yaw\+\_\+@{yaw\+\_\+}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{yaw\+\_\+}{yaw_}}]{\setlength{\rightskip}{0pt plus 5cm}int bug\+\_\+m.\+yaw\+\_\+ = 0}\hypertarget{namespacebug__m_a8b5b5c9259592b8efd526c5adb95d95b}{}\label{namespacebug__m_a8b5b5c9259592b8efd526c5adb95d95b}
+
+
+Orientation angle. 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!yaw\+\_\+error\+\_\+allowed\+\_\+@{yaw\+\_\+error\+\_\+allowed\+\_\+}}
+\index{yaw\+\_\+error\+\_\+allowed\+\_\+@{yaw\+\_\+error\+\_\+allowed\+\_\+}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{yaw\+\_\+error\+\_\+allowed\+\_\+}{yaw_error_allowed_}}]{\setlength{\rightskip}{0pt plus 5cm}int bug\+\_\+m.\+yaw\+\_\+error\+\_\+allowed\+\_\+ = 5}\hypertarget{namespacebug__m_a23e5e76f14d9d0d139767cb229a53dda}{}\label{namespacebug__m_a23e5e76f14d9d0d139767cb229a53dda}
+
+
+Orientation error allowed. 
+
+\index{bug\+\_\+m@{bug\+\_\+m}!z@{z}}
+\index{z@{z}!bug\+\_\+m@{bug\+\_\+m}}
+\subsubsection[{\texorpdfstring{z}{z}}]{\setlength{\rightskip}{0pt plus 5cm}bug\+\_\+m.\+z}\hypertarget{namespacebug__m_afbb54887da57b97920c8d36c6daed1fc}{}\label{namespacebug__m_afbb54887da57b97920c8d36c6daed1fc}
+
+
+Iniitialization of target z coordinate. 
+

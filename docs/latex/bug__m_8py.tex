@@ -1,0 +1,65 @@
+\hypertarget{bug__m_8py}{}\section{scripts/bug\+\_\+m.py File Reference}
+\label{bug__m_8py}\index{scripts/bug\+\_\+m.\+py@{scripts/bug\+\_\+m.\+py}}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacebug__m}{bug\+\_\+m}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacebug__m_add2465382834c48e8e5ec6e361fb6eec}{bug\+\_\+m.\+bug0\+Callback} (req)
+\begin{DoxyCompactList}\small\item\em Callback service function to activate or deactivate the service. \end{DoxyCompactList}\item 
+def \hyperlink{namespacebug__m_a27cfd2a326148157d3e5e0affbe763f3}{bug\+\_\+m.\+clbk\+\_\+odom} (msg)
+\begin{DoxyCompactList}\small\item\em Callback function to know robot position. \end{DoxyCompactList}\item 
+def \hyperlink{namespacebug__m_a6ab3d92b5b6ea12eaa52bf21cfa111f1}{bug\+\_\+m.\+clbk\+\_\+laser} (msg)
+\begin{DoxyCompactList}\small\item\em Calback function to know laser detection values. \end{DoxyCompactList}\item 
+def \hyperlink{namespacebug__m_aca19305feae5c5489e7452e921fcbd9c}{bug\+\_\+m.\+change\+\_\+state} (state)
+\begin{DoxyCompactList}\small\item\em Function to change state in during the algorithm(wall follow, go to point or target reached) \end{DoxyCompactList}\item 
+def \hyperlink{namespacebug__m_a6547c5ebcd1d3aa3e104a5b573e47862}{bug\+\_\+m.\+normalize\+\_\+angle} (angle)
+\begin{DoxyCompactList}\small\item\em Function to normalize angle. \end{DoxyCompactList}\item 
+def \hyperlink{namespacebug__m_a357589ad533151302b9fa9a893833382}{bug\+\_\+m.\+main} ()
+\begin{DoxyCompactList}\small\item\em Main function which implement the Bug0 algorithm slightly modified. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacebug__m_adc14150838edf40c8028207cd6bb2082}{bug\+\_\+m.\+pub} = None
+\begin{DoxyCompactList}\small\item\em Publisher for robot velocity. \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_abd32bbd25b55f71e56505e72ba56c2f6}{bug\+\_\+m.\+srv\+\_\+client\+\_\+go\+\_\+to\+\_\+point\+\_\+} = None
+\begin{DoxyCompactList}\small\item\em Client of go to point service. \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_af40e8063430e5b54ef2f3f8368338744}{bug\+\_\+m.\+srv\+\_\+client\+\_\+wall\+\_\+follower\+\_\+} = None
+\begin{DoxyCompactList}\small\item\em Client of wall follower service. \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_aaeea805feba4dc593b505d3935707987}{bug\+\_\+m.\+rdm\+\_\+target\+\_\+client} = None
+\begin{DoxyCompactList}\small\item\em Client of random target service. \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_ac15f809b3beeffde1c35d3483fe0f07d}{bug\+\_\+m.\+user\+\_\+target\+\_\+client} = None
+\begin{DoxyCompactList}\small\item\em Client of user target service. \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_a714bf24ade1dcbaabdd0e6e1779871bd}{bug\+\_\+m.\+user\+\_\+cmd\+\_\+client} = None
+\begin{DoxyCompactList}\small\item\em Client of user command service. \end{DoxyCompactList}\item 
+int \hyperlink{namespacebug__m_a8b5b5c9259592b8efd526c5adb95d95b}{bug\+\_\+m.\+yaw\+\_\+} = 0
+\begin{DoxyCompactList}\small\item\em Orientation angle. \end{DoxyCompactList}\item 
+int \hyperlink{namespacebug__m_a23e5e76f14d9d0d139767cb229a53dda}{bug\+\_\+m.\+yaw\+\_\+error\+\_\+allowed\+\_\+} = 5
+\begin{DoxyCompactList}\small\item\em Orientation error allowed. \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_ab108d02234aa3ec58605b9f6980ec090}{bug\+\_\+m.\+position\+\_\+} = Point()
+\begin{DoxyCompactList}\small\item\em Robot position. \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_a8fb60e35f164091fe3355d3a0bce95af}{bug\+\_\+m.\+desired\+\_\+position\+\_\+} = Point()
+\begin{DoxyCompactList}\small\item\em Target position. \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_af10f89c7f929c9babce108f5d7382996}{bug\+\_\+m.\+x}
+\begin{DoxyCompactList}\small\item\em Iniitialization of target x coordinate. \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_ab8596d2ae799585b0d89152b55891aa8}{bug\+\_\+m.\+y}
+\begin{DoxyCompactList}\small\item\em Iniitialization of target y coordinate. \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_afbb54887da57b97920c8d36c6daed1fc}{bug\+\_\+m.\+z}
+\begin{DoxyCompactList}\small\item\em Iniitialization of target z coordinate. \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_ac9d4d95c034fca5a2b5d08ea845bbfcb}{bug\+\_\+m.\+regions\+\_\+} = None
+\begin{DoxyCompactList}\small\item\em Regions of Laser callback. \end{DoxyCompactList}\item 
+list \hyperlink{namespacebug__m_ae70f71d3816862f72790fae7bfaa543b}{bug\+\_\+m.\+state\+\_\+desc\+\_\+} = \mbox{[}\textquotesingle{}Go to point\textquotesingle{}, \textquotesingle{}wall following\textquotesingle{}, \textquotesingle{}target reached\textquotesingle{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Possible states. \end{DoxyCompactList}\item 
+int \hyperlink{namespacebug__m_a79dc362dff5bef439beacdd5c0c3b2f1}{bug\+\_\+m.\+state\+\_\+} = 2
+\begin{DoxyCompactList}\small\item\em Initial state. \end{DoxyCompactList}\item 
+bool \hyperlink{namespacebug__m_aac2be257b1acdebfb27dab0e311550d4}{bug\+\_\+m.\+active\+\_\+} = False
+\begin{DoxyCompactList}\small\item\em Service active or not ( fasle by default) \end{DoxyCompactList}\item 
+int \hyperlink{namespacebug__m_a344bbe115cc5a0f27c601941b64f60b0}{bug\+\_\+m.\+start} = 0
+\begin{DoxyCompactList}\small\item\em variable to know if it is just started \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_ad89000edbe3340ac3fe8bd5bee368dec}{bug\+\_\+m.\+start\+\_\+time} = rospy.\+Time()
+\begin{DoxyCompactList}\small\item\em Start time to reaching the target. \end{DoxyCompactList}\item 
+\hyperlink{namespacebug__m_ad56f445349e05abe7f111b48e25d3ecb}{bug\+\_\+m.\+timeout} = rospy.\+Time()
+\begin{DoxyCompactList}\small\item\em Timeout for timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
