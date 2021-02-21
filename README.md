@@ -10,7 +10,7 @@ The architecture should be able to get the user request, and let the robot execu
 	
 	2 - Directly ask the user for the next target position (checking that the position is one of the possible six) and reach it
 	
-	3 -	Start following the external walls
+	3 - Start following the external walls
 	 
 	4 - Stop in the last position
 	 
@@ -84,14 +84,14 @@ For a graphic representation of the software achitecture, please check final_ass
 
 ### System limitations and possible improvements
 **Limitations**:
-	- Sometimes the map can change position during robot motion, this obviously creates problem for robot localization 
-	- Sometimes the input is not detected, so when you press a number and it he acquires a null character
-	- Sometimes it seems that Docker change scheduling order of my scripts unreasonably (so in very rarely cases input for commands overlaps input for target)
+	- Sometimes the map can change position during robot motion, this obviously creates problem for robot localization. <br>
+	- Sometimes the input is not detected, so when you press a number and it he acquires a null character. <br>
+	- Sometimes it seems that Docker change scheduling order of my scripts unreasonably (so in very rarely cases input for commands overlaps input for target).<br>
 	
 I think that these are problems related to Docker execution on my PC, but I cannot be sure of this.
 
 **Possible improvements**:
-	- There is a print about laser scanner, probably due to move base nodes, I would delete it to have a cleaner output on the terminal.
-	- Find a more efficent recovery behavior for bug0 instead of the timer.
-	- Print robot position or distance from the target when robot is moving. 
+	- There is a print about laser scanner, probably due to move base nodes, I would delete it to have a cleaner output on the terminal.<br>
+	- Find a more efficent recovery behavior for bug0 instead of the timer.<br>
+	- Print robot position or distance from the target when robot is moving.<br>
 	
