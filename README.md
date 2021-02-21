@@ -71,6 +71,9 @@ Behavior 3,4,5 can be executed only when robot has reached the target in 1 or 2,
 	
 Attention: move_base has a recovery behavior for unreachable target, bug0 doesn't, so I have implemented a timeout to avoid robot tryng to reach unfiesable targets, when the timer expires the robot stop itself and ask for a new command from user.
 
+In particular, when robot is going to the random target, it asks user for a new command which will be executed when the target is reached, insted when it's going to a given from user target, it waits until have reached the target to ask user for a command.
+In other cases (commands 3,4 and 5) the robot asks immediately user for a new command tha it's executed instantly.
+
 	
 ### About software architecture
 I decided to have 4 parameters (target coordinates x and y, command inserted by user, a flag to check if the target is reached) in order to allow all nodes to check and modify them.
