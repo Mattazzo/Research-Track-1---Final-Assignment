@@ -25,11 +25,11 @@ If the robot is in state 1, or 2, the system should wait until the robot reaches
 - **scripts**		: It's a folder containing all Python executable used in this package 
 - **worlds** 		: It's a folder that define the world within the robot should move
 - **launch**		: It's a folder containing all file with .launch extension needed to launch the simulation
-- **urdf**			: It's a folder containing all information and description about the robot 
-- **param**			: It's a folder containing all file with .yaml extension neede to set parameters for the simulation
+- **urdf**		: It's a folder containing all information and description about the robot 
+- **param**		: It's a folder containing all file with .yaml extension neede to set parameters for the simulation
 - **config**		: It's a folder containing a file useful for simulation tools
 - **rosgraph.png**	: It's an image which graphically represent how nodes comuinicate and which topics they use
-- **CMakeList.txt** : It's a file with informations about the compilation 
+- **CMakeList.txt** 	: It's a file with informations about the compilation 
 - **package.xml**	: It's a file with informations about the compilation
 
 In particular the folder 'scripts' contain:
@@ -84,6 +84,7 @@ For a graphic representation of the software achitecture, please check final_ass
 
 ### System limitations and possible improvements
 **Limitations**:
+
 	- Sometimes the map can change position during robot motion, this obviously creates problem for robot localization. <br>
 	- Sometimes the input is not detected, so when you press a number and it he acquires a null character. <br>
 	- Sometimes it seems that Docker change scheduling order of my scripts unreasonably (so in very rarely cases input for commands overlaps input for target).<br>
@@ -91,6 +92,7 @@ For a graphic representation of the software achitecture, please check final_ass
 I think that these are problems related to Docker execution on my PC, but I cannot be sure of this.
 
 **Possible improvements**:
+
 	- There is a print about laser scanner, probably due to move base nodes, I would delete it to have a cleaner output on the terminal.<br>
 	- Find a more efficent recovery behavior for bug0 instead of the timer.<br>
 	- Print robot position or distance from the target when robot is moving.<br>
